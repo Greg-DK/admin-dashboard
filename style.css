@@ -1,0 +1,231 @@
+/*http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/* Post Reset */
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}
+
+.logo-container {
+    background-color: aquamarine;
+    border: solid 2px black;
+}
+
+.search {
+    border: solid 2px black;
+}
+
+.search img {
+    width: 1.5rem;
+    
+}
+
+.search input {
+    width: clamp(8rem, 40vw, 30rem);
+}
+
+.header-profile {
+    border: solid 2px black;
+    display: flex;
+}
+
+/* Main Body */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3rem 1fr 1fr;
+}
+
+.primary-navigation {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border: 2px solid black;
+
+    background-color: aquamarine;
+}
+
+#Home {
+    grid-area: Home;
+}
+
+#Profile {
+    grid-area: Profile;
+}
+
+#Messages {
+    grid-area: Messages;
+}
+
+#History {
+    grid-area: History;
+}
+
+#Tasks {
+    grid-area: Tasks;
+}
+
+#Communities {
+    grid-area: Communities;
+}
+
+#Settings {
+    grid-area: Settings;
+}
+
+#Support {
+    grid-area: Support;
+}
+
+#Privacy {
+    grid-area: Privacy;
+}
+
+.nav-list {
+    display:grid;
+    grid-template-rows: repeat(10, 2rem);
+    grid-template-areas: 
+    "Home"
+    "Profile"
+    "Messages"
+    "History"
+    "Tasks"
+    "Communities"
+    "."
+    "Settings"
+    "Support"
+    "Privacy"
+}
+
+.action-bar {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    border: 2px solid black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile {
+    display: flex;
+    border: solid 2px black;
+}
+.actions {
+    justify-self: center;
+    align-self: center;
+    border: solid 2px black;
+}
+button {
+    border-radius: 100vw;
+}
+
+.projects {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    border: 2px solid black;
+    margin: 1rem 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.project {
+    width: 150px;
+    height: 150px;
+    border: solid 2px black;
+    border-radius: 1rem;
+}
+
+.announcement-container {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    border: 2px solid black;
+}
+
+.announcement-container h3 {
+    padding: 1rem 0rem;
+}
+
+.announcements {
+    border: 2px solid black;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-rows: 2rem 1fr 1fr 1fr;
+}
+
+.announcement {
+    padding: 1rem 1rem;
+}
+.trending-container {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    border: 2px solid black;
+}
+
+.trends {
+    display: grid;
+    grid-template-rows: repeat(4, 3rem  );
+    border: 2px solid black;
+    border-radius: 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.trend {
+    border: 2px solid black;
+    padding: 1rem 1rem;
+}
